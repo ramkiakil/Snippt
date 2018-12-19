@@ -15,7 +15,7 @@ export default class App extends Component {
  
           <View style={{flex:9,flexDirection:'row',alignItems:'center',}}>
              <View style={{flex:25,alignItems:'center'}}>
-             <Icon name="menu" color="#ee5253" size={35} />
+             <Icon name="menu" color="#ee5253" size={35} onPress={()=>this.props.navigation.openDrawer()} />
 
              </View>
              <View style={{flex:75,}}>
