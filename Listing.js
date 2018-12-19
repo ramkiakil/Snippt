@@ -8,6 +8,21 @@ const height= Dimensions.get('window').height
 
 
 export default class App extends Component {
+
+  static navigationOptions = {
+   
+    drawerIcon: ({tintColor}) => {
+       
+        return (
+            <Icon
+            name="add-to-list"
+            size={24}
+            style={{color: tintColor}}
+            >
+            </Icon>
+        );
+    }
+}
   render() {
     return (
       <SafeAreaView style={styles.container}>

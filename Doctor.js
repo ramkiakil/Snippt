@@ -10,11 +10,27 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,Dimensions,SafeAreaView,ScrollView,Button,TouchableHighlight} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 const width = Dimensions.get('window').width
 const height= Dimensions.get('window').height
 
 
 export default class App extends Component {
+
+  static navigationOptions = {
+   
+    drawerIcon: ({tintColor}) => {
+       
+        return (
+            <MaterialCommunityIcons
+            name="hospital"
+            size={24}
+            style={{color: tintColor}}
+            >
+            </MaterialCommunityIcons>
+        );
+    }
+}
   render() {
     return (
       <SafeAreaView style={styles.container}>

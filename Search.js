@@ -15,6 +15,20 @@ const height= Dimensions.get('window').height
 
 
 export default class Search extends Component {
+    static navigationOptions = {
+   
+        drawerIcon: ({tintColor}) => {
+           
+            return (
+                <FontAwesome
+                name="search"
+                size={24}
+                style={{color: tintColor}}
+                >
+                </FontAwesome>
+            );
+        }
+    }
   render() {
     return (
       <SafeAreaView style={styles.container}>
